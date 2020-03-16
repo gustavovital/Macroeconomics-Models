@@ -72,6 +72,3 @@ data <- tibble(hiato = cut_series(h),
 
 is.curve <- dynlm(hiato ~ L(hiato, 1) + L(hiato, 2) + L(r, 1), data = data)
 is.fiscal <- dynlm(hiato ~ L(hiato, 1) + L(hiato, 2) + L(r, 1) + L(nfsp, 1), data = data)
-
-summary(is.curve)
-summary(is.fiscal)
