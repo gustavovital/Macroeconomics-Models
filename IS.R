@@ -1,4 +1,4 @@
-# Script com o objetivo de replicar os modelos econometricos apresentados no
+# Script com o objetivo de replicar os modelos econometricos de IS apresentados no
 # wp01 do bcb, intitulado "Implementing Inflation Target in Brazil".
 # 
 # Autor: @gustavoovital
