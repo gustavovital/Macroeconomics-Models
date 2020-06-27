@@ -2,25 +2,27 @@
 {
 	"commands" : 
 	[
-		"var_hibrid.ls 1 1 inflation exp_inflation gdp_gap d(exchange_rate) ppi ",
-		"var_hibrid.forecast(g, e) f",
-		"model_hibrid.solveopt(s=a)\nmodel_hibrid.solve",
-		"{%model}.solveopt(s=a)\n{%model}.solve",
-		"close VAR_HIBRID",
-		"var_hibrid.forecast(g, e) f",
-		"close VAR_HIBRID"
+		"inflation.uroot",
+		"close INTEREST_RATE",
+		"copy(overwrite) is\\INTEREST_RATE *",
+		"interest_rate.uroot",
+		"close TAYLOR_RULE",
+		"delete taylor_rule ",
+		"genr d_interest_rate = d(interest_rate)",
+		"is.ls gdp_gap c gdp_gap(-1) gdp_gap(-2) d_interest_rate",
+		"close PASS_THROUGH"
 	],
 	"description" : "",
 	"label" : "auto",
 	"workbook_meta" : 
 	{
-		"_name" : "e:\\macroeconomia\\estimações\\wp01\\workfile_model.wf1",
+		"_name" : "e:\\macroeconomia\\estimações\\wp01\\workfile.wf1",
 		"_pages" : 
 		[
 			
 			{
 				"_frequency" : "Q",
-				"_last_update" : [ 737602.5747800926, "06/27/2020 13:47" ],
+				"_last_update" : [ 737602.6440509260, "06/27/2020 15:27" ],
 				"_name" : "semi_structural_model",
 				"_obj_count" : 40,
 				"_objects" : 
@@ -37,6 +39,11 @@
 					{
 						"_name" : "C",
 						"_type" : "COEF"
+					},
+					
+					{
+						"_name" : "D_INTEREST_RATE",
+						"_type" : "SERIES"
 					},
 					
 					{
@@ -227,11 +234,6 @@
 					{
 						"_name" : "SEMI_STRUCTURAL_MODEL",
 						"_type" : "MODEL"
-					},
-					
-					{
-						"_name" : "TAYLOR_RULE",
-						"_type" : "EQUATION"
 					}
 				],
 				"_obs_count" : 68
@@ -241,7 +243,7 @@
 				"_frequency" : "Q",
 				"_last_update" : [ 737602.5698032407, "06/27/2020 13:40" ],
 				"_name" : "phillips_curve",
-				"_obj_count" : 45,
+				"_obj_count" : 28,
 				"_objects" : 
 				[
 					
@@ -260,16 +262,6 @@
 					
 					{
 						"_name" : "EXCHANGE_RATE",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "EXCHANGE_RATE_0",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "EXCHANGE_RATE_0_0M",
 						"_type" : "SERIES"
 					},
 					
@@ -294,22 +286,7 @@
 					},
 					
 					{
-						"_name" : "EXCHANGE_RATE_F",
-						"_type" : "SERIES"
-					},
-					
-					{
 						"_name" : "EXP_INFLATION",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "EXP_INFLATION_0",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "EXP_INFLATION_0_0M",
 						"_type" : "SERIES"
 					},
 					
@@ -334,22 +311,7 @@
 					},
 					
 					{
-						"_name" : "EXP_INFLATION_F",
-						"_type" : "SERIES"
-					},
-					
-					{
 						"_name" : "GDP_GAP",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "GDP_GAP_0",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "GDP_GAP_0_0M",
 						"_type" : "SERIES"
 					},
 					
@@ -374,22 +336,7 @@
 					},
 					
 					{
-						"_name" : "GDP_GAP_F",
-						"_type" : "SERIES"
-					},
-					
-					{
 						"_name" : "INFLATION",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "INFLATION_0",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "INFLATION_0_0M",
 						"_type" : "SERIES"
 					},
 					
@@ -410,11 +357,6 @@
 					
 					{
 						"_name" : "INFLATION_0S",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "INFLATION_F",
 						"_type" : "SERIES"
 					},
 					
@@ -444,31 +386,6 @@
 					},
 					
 					{
-						"_name" : "PPI_0H",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "PPI_0L",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "PPI_0M",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "PPI_0S",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "PPI_F",
-						"_type" : "SERIES"
-					},
-					
-					{
 						"_name" : "RESID",
 						"_type" : "SERIES"
 					},
@@ -485,15 +402,15 @@
 				"_frequency" : "Q",
 				"_last_update" : [ 737602.5511689815, "06/27/2020 13:13" ],
 				"_name" : "is",
-				"_obj_count" : 25,
+				"_obj_count" : 7,
 				"_objects" : 
 				[
 					
 					{
 						"_data_type" : "date",
 						"_name" : "@DATE",
-						"_obs_max" : [ 737332.0, "10/01/2019" ],
-						"_obs_min" : [ 731946.0, "01/01/2005" ],
+						"_obs_max" : [ 737515.0, "04/01/2020" ],
+						"_obs_min" : [ 722814.0, "01/01/1980" ],
 						"_type" : "INDEX"
 					},
 					
@@ -503,72 +420,17 @@
 					},
 					
 					{
+						"_name" : "D_INTEREST_RATE",
+						"_type" : "SERIES"
+					},
+					
+					{
 						"_name" : "GDP_GAP",
 						"_type" : "SERIES"
 					},
 					
 					{
-						"_name" : "GDP_GAP_0",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "GDP_GAP_0H",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "GDP_GAP_0L",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "GDP_GAP_0M",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "GDP_GAP_0S",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "GDP_GAP_F",
-						"_type" : "SERIES"
-					},
-					
-					{
 						"_name" : "INTEREST_RATE",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "INTEREST_RATE_0",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "INTEREST_RATE_0H",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "INTEREST_RATE_0L",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "INTEREST_RATE_0M",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "INTEREST_RATE_0S",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "INTEREST_RATE_F",
 						"_type" : "SERIES"
 					},
 					
@@ -583,46 +445,11 @@
 					},
 					
 					{
-						"_name" : "PSBR_0",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "PSBR_0H",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "PSBR_0L",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "PSBR_0M",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "PSBR_0S",
-						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "PSBR_F",
-						"_type" : "SERIES"
-					},
-					
-					{
 						"_name" : "RESID",
 						"_type" : "SERIES"
-					},
-					
-					{
-						"_name" : "VAR_IS",
-						"_type" : "VAR"
 					}
 				],
-				"_obs_count" : 60
+				"_obs_count" : 162
 			},
 			
 			{
