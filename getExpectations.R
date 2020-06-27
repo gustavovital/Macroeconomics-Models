@@ -6,8 +6,8 @@
 
 # Pacotes necessários: ----
 
-#install.packages('devtools', dependencies = TRUE)
-#devtools::install_github('wilsonfreitas/rbcb')
+install.packages('devtools', dependencies = TRUE)
+devtools::install_github('wilsonfreitas/rbcb')
 
 library(rbcb)
 library(tidyverse)
