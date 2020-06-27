@@ -1,0 +1,308 @@
+
+{
+	"commands" : null,
+	"description" : "",
+	"label" : "auto",
+	"workbook_meta" : 
+	{
+		"_name" : "e:\\macroeconomia\\estimações\\wp01\\workfile.wf1",
+		"_pages" : 
+		[
+			
+			{
+				"_frequency" : "Q",
+				"_last_update" : [ 737602.5521643518, "06/27/2020 13:15" ],
+				"_name" : "semi_structural_model",
+				"_obj_count" : 15,
+				"_objects" : 
+				[
+					
+					{
+						"_data_type" : "date",
+						"_name" : "@DATE",
+						"_obs_max" : [ 737698.0, "10/01/2020" ],
+						"_obs_min" : [ 722814.0, "01/01/1980" ],
+						"_type" : "INDEX"
+					},
+					
+					{
+						"_name" : "C",
+						"_type" : "COEF"
+					},
+					
+					{
+						"_name" : "EXCHANGE_RATE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "EXP_INFLATION",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GDP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GDP_GAP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GDP_TREND",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INFLATION",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INFLATION_TARGET",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INTEREST_RATE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INTEREST_RATE_FOREIGN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IS",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "PPI",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PSBR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESID",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SEMI_STRUCTURAL_MODEL",
+						"_type" : "MODEL"
+					}
+				],
+				"_obs_count" : 164
+			},
+			
+			{
+				"_frequency" : "Q",
+				"_last_update" : [ 737602.5400347222, "06/27/2020 12:57" ],
+				"_name" : "phillips_curve",
+				"_obj_count" : 7,
+				"_objects" : 
+				[
+					
+					{
+						"_data_type" : "date",
+						"_name" : "@DATE",
+						"_obs_max" : [ 737515.0, "04/01/2020" ],
+						"_obs_min" : [ 722814.0, "01/01/1980" ],
+						"_type" : "INDEX"
+					},
+					
+					{
+						"_name" : "C",
+						"_type" : "COEF"
+					},
+					
+					{
+						"_name" : "EXCHANGE_RATE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "EXP_INFLATION",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GDP_GAP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INFLATION",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PPI",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESID",
+						"_type" : "SERIES"
+					}
+				],
+				"_obs_count" : 162
+			},
+			
+			{
+				"_frequency" : "Q",
+				"_last_update" : [ 737602.5511689815, "06/27/2020 13:13" ],
+				"_name" : "is",
+				"_obj_count" : 6,
+				"_objects" : 
+				[
+					
+					{
+						"_data_type" : "date",
+						"_name" : "@DATE",
+						"_obs_max" : [ 737515.0, "04/01/2020" ],
+						"_obs_min" : [ 722814.0, "01/01/1980" ],
+						"_type" : "INDEX"
+					},
+					
+					{
+						"_name" : "C",
+						"_type" : "COEF"
+					},
+					
+					{
+						"_name" : "GDP_GAP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INTEREST_RATE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IS_01",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "PSBR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESID",
+						"_type" : "SERIES"
+					}
+				],
+				"_obs_count" : 162
+			},
+			
+			{
+				"_frequency" : "Q",
+				"_last_update" : [ 737602.5416087963, "06/27/2020 12:59" ],
+				"_name" : "pass_through",
+				"_obj_count" : 6,
+				"_objects" : 
+				[
+					
+					{
+						"_data_type" : "date",
+						"_name" : "@DATE",
+						"_obs_max" : [ 737515.0, "04/01/2020" ],
+						"_obs_min" : [ 722814.0, "01/01/1980" ],
+						"_type" : "INDEX"
+					},
+					
+					{
+						"_name" : "C",
+						"_type" : "COEF"
+					},
+					
+					{
+						"_name" : "EXCHANGE_RATE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INFLATION",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INTEREST_RATE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INTEREST_RATE_FOREIGN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESID",
+						"_type" : "SERIES"
+					}
+				],
+				"_obs_count" : 162
+			},
+			
+			{
+				"_frequency" : "Q",
+				"_last_update" : [ 737602.5472222222, "06/27/2020 13:08" ],
+				"_name" : "taylor_rule",
+				"_obj_count" : 6,
+				"_objects" : 
+				[
+					
+					{
+						"_data_type" : "date",
+						"_name" : "@DATE",
+						"_obs_max" : [ 737698.0, "10/01/2020" ],
+						"_obs_min" : [ 722814.0, "01/01/1980" ],
+						"_type" : "INDEX"
+					},
+					
+					{
+						"_name" : "C",
+						"_type" : "COEF"
+					},
+					
+					{
+						"_name" : "GDP_GAP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INFLATION",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INFLATION_TARGET",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INTEREST_RATE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESID",
+						"_type" : "SERIES"
+					}
+				],
+				"_obs_count" : 164
+			}
+		]
+	}
+}
