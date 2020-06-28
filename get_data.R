@@ -62,6 +62,7 @@ interest_us_quarter <- month_to_quarter(interest_us)
 ppi_quarter <- month_to_quarter(ppi)
 ipca_quarter <- month_to_quarter(ipca)
 exp_ipca_quarter <- month_to_quarter(exp_ipca)
+meta <- c(rep(8,4), rep(6,4), rep(4,4), rep(3.5, 4), rep(4,4), rep(5.5,4), rep(4.5, 14*4), rep(4.25,4), rep(4,4))
 
 PIB <- PIB
 
@@ -75,4 +76,4 @@ write.csv(as.numeric(interest_us_quarter), 'Data/interest_us_quarter.csv')
 write.csv(as.numeric(ppi_quarter), 'Data/ppi_quarter.csv')
 write.csv(as.numeric(ipca_quarter), 'Data/ipca_quarter.csv')
 write.csv(as.numeric(exp_ipca_quarter), 'Data/exp_ipca_quarter.csv')
-
+write.csv(meta, 'Data/meta.csv')
