@@ -1,0 +1,155 @@
+
+{
+	"commands" : 
+	[
+		"pagecopy y grm1 inf int ",
+		"genr y = log(y)",
+		"genr d_y = d(y)",
+		"genr d_grm1 = d(grm1)",
+		"genr d_int = d(int)",
+		"genr d_inf = d(inf)",
+		"pagerename artigo Paper"
+	],
+	"description" : "",
+	"label" : "auto",
+	"workbook_meta" : 
+	{
+		"_name" : "e:\\estudos\\monetary policy and inflation in brazil (1975-2000) a var estimation\\workfile.wf1",
+		"_pages" : 
+		[
+			
+			{
+				"_frequency" : "M",
+				"_last_update" : [ 737606.4583449074, "07/01/2020 11:00" ],
+				"_name" : "DataBase",
+				"_obj_count" : 9,
+				"_objects" : 
+				[
+					
+					{
+						"_data_type" : "date",
+						"_name" : "@DATE",
+						"_obs_max" : [ 737576.0, "06/01/2020" ],
+						"_obs_min" : [ 709665.0, "01/01/1944" ],
+						"_type" : "INDEX"
+					},
+					
+					{
+						"_name" : "C",
+						"_type" : "COEF"
+					},
+					
+					{
+						"_name" : "GRM1",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IGP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "M1",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PIM",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESID",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "Y",
+						"_type" : "SERIES"
+					}
+				],
+				"_obs_count" : 918
+			},
+			
+			{
+				"_frequency" : "M",
+				"_last_update" : [ 737606.4601388889, "07/01/2020 11:02" ],
+				"_name" : "Paper",
+				"_obj_count" : 10,
+				"_objects" : 
+				[
+					
+					{
+						"_data_type" : "date",
+						"_name" : "@DATE",
+						"_obs_max" : [ 737576.0, "06/01/2020" ],
+						"_obs_min" : [ 709665.0, "01/01/1944" ],
+						"_type" : "INDEX"
+					},
+					
+					{
+						"_name" : "C",
+						"_type" : "COEF"
+					},
+					
+					{
+						"_name" : "D_GRM1",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "D_INF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "D_INT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "D_Y",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRM1",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESID",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "Y",
+						"_type" : "SERIES"
+					}
+				],
+				"_obs_count" : 918
+			}
+		]
+	}
+}
