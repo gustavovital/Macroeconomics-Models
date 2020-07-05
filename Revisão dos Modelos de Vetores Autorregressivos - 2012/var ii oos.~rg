@@ -4,11 +4,17 @@
 ' Sample for forecasting (Eviews format) 
 %fsmpl="2020m04 2020m12"
 
-'fanchart
+'Number of bands in fanchart starting from 90%. 
+'For example, !numb=1 plots 90% band and the mode, 
+'!numb=2 plots 90% band, 45% band and the mode 
 !numb=3
 
+'Do not change the 2 parameters below unless you are adapting the code
+' for your own model
+'Name of the model to be used for constructing a fan chart
 %modname="mod"
 
+'Variable to forecast (has to be one of the model variables)
 %varname="ipca"
 
 smpl {%esmpl}
@@ -82,13 +88,13 @@ show fanchart
 
 ' cria tabela, o default é para 3 intervalos de confiança 30 60 90
 
-smpl 2020m5 @last
+smpl 2019m1 @last
 
 g2.add {%varname}_0m
 
 freeze(matriz) g2 
 
-table(9, 8) previsoes
+table(13, 8) previsoes
 
 setcell(previsoes, 1,1, "Data")
 setcell(previsoes, 1,2, "90%")
@@ -99,7 +105,7 @@ setcell(previsoes, 1,6, "30%")
 setcell(previsoes, 1,7, "60%")
 setcell(previsoes, 1,8, "90%")
 
-for !i=3 to 10
+for !i=3 to 14
 
 	setcell(previsoes, !i-1,1, matriz(!i, 1))
 	setcell(previsoes, !i-1,2, @val(matriz(!i, 2)))
@@ -146,7 +152,7 @@ for !i=1 to !numb+1
 next
 
 previsoes.setlines(a1:h1) +b
-previsoes.setlines(a9:h9) +b
+previsoes.setlines(a13:h13) +b
 
 previsoes.setlines(a) +r
 previsoes.setlines(b) +r
