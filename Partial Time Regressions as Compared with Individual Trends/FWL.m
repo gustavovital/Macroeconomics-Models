@@ -45,5 +45,3 @@ disp("By the deviations coefficients:")
 disp(mxy_t/mxx_t);
 disp("By the partial time regression:")
 disp(byxt);
-
-% ;)
